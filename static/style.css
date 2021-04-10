@@ -1,0 +1,102 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 15px;
+}
+
+body {
+	background-color: hsl(0, 0%, 95%);
+	margin: 0;
+	padding: 20% 6.5%;
+}
+
+img {
+  max-width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+	color: hsl(0, 0%, 95%);
+	font-family: "Big Shoulders Display";
+	font-size: 2.5rem;
+	letter-spacing: 1px;
+	margin: 0 0 1.5rem 0;
+	text-transform: uppercase;
+}
+
+p {
+	color: hsla(0, 0%, 100%, 0.75);
+	font-family: "Lexend Deca";
+	font-size: .8rem;
+	letter-spacing: .2px;
+	line-height: 1.2rem;
+	margin-bottom: 1.75rem;
+}
+
+.container {
+	max-width: 400px;
+	margin: 0 auto;
+	padding: 3em 0;
+	width: 64%;
+}
+
+.row {
+	display: flex;
+	flex-direction: column;
+}
+
+.btn {
+	background-color: hsl(0, 0%, 95%);
+	border-radius: 100px;
+	font-family: "Lexend Deca";
+	font-size: 1rem;
+	padding: .65em 1.5em;
+	text-decoration: none;
+}
+
+.orange {
+	background-color: hsl(31, 77%, 52%);
+}
+
+	.orange .btn {
+		color: hsl(31, 77%, 52%);
+	}
+
+.cyan {
+	background-color: hsl(184, 100%, 22%);
+}
+
+	.cyan .btn {
+		color: hsl(184, 100%, 22%);
+	}
+
+.dark-cyan {
+	background-color: hsl(179, 100%, 13%);
+}
+
+	.dark-cyan .btn {
+		color: hsl(179, 100%, 13%);
+	}
+
+
+@media (min-width: 900px) {
+	.row {
+		flex-direction: row;
+	}
+
+	body {
+		padding: 10% 15%
+	}
+
+	p {
+		margin-bottom: 9em;
+	}
+}
+
+@media (min-width: 1200px) {
+	html {
+		font-size: 20px;
+	}
+}
