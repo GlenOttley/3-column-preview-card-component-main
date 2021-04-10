@@ -1,0 +1,5 @@
+node_modules
+style-guide.md
+/design
+.DS_Store
+README-template.md
