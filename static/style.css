@@ -1,3 +1,13 @@
+:root {
+	--bright-orange: hsl(31, 77%, 52%);
+	--dark-cyan: hsl(184, 100%, 22%);
+	--very-dark-cyan: hsl(179, 100%, 13%);
+	/* paragraphs*/
+	--transparent-white: hsla(0, 0%, 100%, 0.75);
+	/* background, headings, buttons */
+	--very-light-gray: hsl(0, 0%, 95%);
+}
+
 *, *::before, *::after {
 	box-sizing: border-box;
 }
@@ -7,7 +17,7 @@ html {
 }
 
 body {
-	background-color: hsl(0, 0%, 95%);
+	background-color: var(--very-light-gray);
 	margin: 0;
 	padding: 20% 6.5%;
 }
@@ -18,7 +28,7 @@ img {
 }
 
 h1 {
-	color: hsl(0, 0%, 95%);
+	color: var(--very-light-gray);
 	font-family: "Big Shoulders Display";
 	font-size: 2.5rem;
 	letter-spacing: 1px;
@@ -27,66 +37,81 @@ h1 {
 }
 
 p {
-	color: hsla(0, 0%, 100%, 0.75);
+	color: var(--transparent-white);
 	font-family: "Lexend Deca";
 	font-size: .8rem;
 	letter-spacing: .2px;
 	line-height: 1.2rem;
-	/*margin-bottom: 1.75rem;*/
+	flex-grow: 1;
 }
 
 .container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
 	max-width: 400px;
 	margin: 0 auto;
 	padding: 3em 0;
+	height: 100%;
 	width: 64%;
 }
 
 .row {
+	border-radius: 10px;
+	overflow: hidden;
 	display: flex;
 	flex-direction: column;
 }
 
 .btn {
-	background-color: hsl(0, 0%, 95%);
+	margin-top: auto;
+	background-color: var(--very-light-gray);
+	border: 2px solid var(--very-light-gray);
 	border-radius: 100px;
-	display: inline-block;
 	font-family: "Lexend Deca";
 	font-size: 1rem;
 	padding: .65em 1.5em;
 	text-decoration: none;
-	transition: all .2s ease-in-out;
-}
-
-.btn:hover {
-	opacity: .75;
-	transform: scale(1.1);
 }
 
 .orange {
-	background-color: hsl(31, 77%, 52%);
-	border-radius: 10px 10px 0 0;
+	background-color: var(--bright-orange);
 }
 
 	.orange .btn {
-		color: hsl(31, 77%, 52%);
+		color: var(--bright-orange);
 	}
 
-.cyan {
-	background-color: hsl(184, 100%, 22%);
-}
-
-	.cyan .btn {
-		color: hsl(184, 100%, 22%);
+	.orange .btn:hover {
+		background-color: var(--bright-orange);
+		color: var(--very-light-gray);
 	}
 
 .dark-cyan {
-	background-color: hsl(179, 100%, 13%);
-	border-radius: 0 0 10px 10px;
+	background-color: var(--dark-cyan);
 }
 
 	.dark-cyan .btn {
-		color: hsl(179, 100%, 13%);
+		color: var(--dark-cyan);
+	}
+
+	.dark-cyan .btn:hover {
+		background-color: var(--dark-cyan);
+		color: var(--very-light-gray);
+	}
+
+.very-dark-cyan {
+	background-color: var(--very-dark-cyan);
+}
+
+	.very-dark-cyan .btn {
+		color: var(--very-dark-cyan);
+	}
+
+	.very-dark-cyan .btn:hover {
+		background-color: var(--very-dark-cyan);
+		color: var(--very-light-gray);
 	}
 
 
@@ -101,14 +126,6 @@ p {
 
 	p {
 		margin-bottom: 9em;
-	}
-
-	.orange {
-		border-radius: 10px 0 0 10px;
-	}
-
-	.dark-cyan {
-		border-radius: 0 10px 10px 0;
 	}
 }
 
